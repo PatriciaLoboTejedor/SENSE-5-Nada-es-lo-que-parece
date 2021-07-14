@@ -1,0 +1,114 @@
+/*ADALABERS*/
+.whoarewe {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
+  scroll-margin-top: 105px;
+
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+
+  @include desktop {
+    width: 70%;
+  }
+
+  .whoarewe-title {
+    color: $color-bluegreen;
+    text-transform: uppercase;
+    font-family: $main-font-family;
+    margin: 1rem;
+  }
+
+  .container-person-info {
+    margin-bottom: 10px;
+    @include tablet {
+      display: flex;
+      text-align: left;
+      align-items: center;
+      gap: 2rem;
+      padding-bottom: 20px;
+    }
+    @include desktop {
+      align-items: flex-start;
+    }
+    &:nth-child(odd) {
+      @include tablet {
+        flex-direction: row-reverse;
+        text-align: right;
+      }
+    }
+
+    .img-person-info {
+      height: 180px;
+      width: 180px;
+      @include tablet {
+        width: 207px;
+        height: 207px;
+      }
+      @include desktop {
+        width: 278px;
+        height: 278px;
+      }
+    }
+    .img:hover {
+      background-size: 180px 180px;
+      padding-left: 180px;
+      @include tablet {
+        background-size: 207px 207px;
+        padding-left: 207px;
+      }
+      @include desktop {
+        background-size: 278px 278px;
+        padding-left: 278px;
+      }
+    }
+    .person-info {
+      @include tablet {
+        width: 60%;
+      }
+      &__title {
+        color: black;
+        margin: 1rem 0;
+      }
+      &__text {
+        color: grey;
+      }
+      &__rrss {
+        display: inline-flex;
+        gap: 0.5rem;
+        margin: 25px 0;
+        .icon {
+          color: $color-bluegreen;
+          .fab:after {
+            content: "·";
+            margin: 0 2px 0 7px;
+          }
+          a {
+            color: $color-bluegreen;
+            &:hover {
+              color: $color-font;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.img-elia:hover {
+  background: url(../images/Memoji-Elia.png) left top no-repeat;
+}
+.img-rosa:hover {
+  background: url(../images/Memoji-Rosa.png) left top no-repeat;
+}
+.img-patri:hover {
+  background: url(../images/Memoji-Pati.png) left top no-repeat;
+}
+.img-maca:hover {
+  background: url(../images/Memoji-Maca.png) left top no-repeat;
+}
+.img-maria:hover {
+  background: url(../images/Memoji-Maria.png) left top no-repeat;
+}

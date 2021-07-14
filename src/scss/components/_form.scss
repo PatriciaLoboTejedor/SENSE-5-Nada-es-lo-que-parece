@@ -1,0 +1,72 @@
+/* FORM */
+.form {
+  margin: 0 auto;
+  text-align: left;
+  width: 90%;
+  max-width: 440px;
+  text-transform: capitalize;
+
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.8rem;
+}
+
+textarea {
+  display: block;
+  font-family: $root-font-family;
+  font-size: 14px;
+}
+
+input,
+textarea {
+  margin-top: 7px;
+  width: 100%;
+  padding: 10px;
+}
+
+/*input:invalid {
+  border: thin solid red;
+}*/
+
+textarea {
+  height: 105px;
+}
+
+label {
+  color: $color-font;
+}
+
+.button {
+  border-radius: 5px;
+  border: none;
+  padding: 0.8rem;
+  margin-top: 15px;
+  color: white;
+  background-color: $color-bluegreen;
+  text-transform: uppercase;
+  cursor: pointer;
+  @include tablet {
+    width: 50%;
+    margin-right: 0px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .form {
+    max-width: 600px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    label {
+      width: 100%;
+    }
+
+    .email {
+      width: 60%;
+    }
+
+    .telf {
+      width: 35%;
+    }
+  }
+}

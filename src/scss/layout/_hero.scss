@@ -1,0 +1,177 @@
+.hero {
+  position: relative;
+  background: url(../images/fondo-hero.svg) center;
+  background-size: cover;
+  height: 421px;
+
+  @include desktop {
+    height: 550px;
+  }
+
+  .img-hero {
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+
+    padding-top: 3rem;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+
+    @include tablet {
+      width: 750px;
+    }
+    @include desktop {
+      width: 100%;
+    }
+
+    .memoji-hero {
+      animation: 4s movement ease-in-out infinite;
+
+      @include desktop {
+        height: 270px;
+        width: 270px;
+
+        justify-self: center;
+      }
+    }
+
+    .elia {
+      animation: 4s movement2 ease-in-out infinite;
+      background: url(../images/Memoji-Elia.png) no-repeat center;
+      background-size: contain;
+
+      grid-column: span 2;
+    }
+
+    .rosa {
+      background: url(../images/Memoji-Rosa.png) no-repeat center;
+      background-size: contain;
+
+      grid-column: span 2;
+    }
+
+    .pati {
+      animation: 4s movement3 ease-in-out infinite;
+      background: url(../images/Memoji-Pati.png) no-repeat center;
+      background-size: contain;
+
+      grid-column: span 2;
+    }
+
+    .maca {
+      background: url(../images/Memoji-Maca.png) no-repeat center;
+      background-size: contain;
+
+      grid-column: span 2;
+    }
+
+    .maria {
+      animation: 4s movement2 ease-in-out infinite;
+      background: url(../images/Memoji-Maria.png) no-repeat center;
+      background-size: contain;
+
+      grid-column: 2/4;
+    }
+  }
+  .box-claim {
+    background-color: $color-bluegreen;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    width: 90%;
+
+    display: block;
+    position: relative;
+    bottom: 22.25px;
+    margin: 0 auto;
+
+    cursor: pointer;
+
+    color: white;
+    font-size: 14px;
+    text-align: center;
+
+    @include tablet {
+      left: -20%;
+      max-width: 350px;
+    }
+    @include desktop {
+      font-size: 1.125rem;
+      left: -30%;
+      bottom: 26.5px;
+    }
+
+    &:hover {
+      filter: invert(1);
+      transition: 0.4s ease;
+    }
+    animation-name: box-claim-scale;
+    animation-duration: 0.5s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+
+    @keyframes box-claim-scale {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+@keyframes movement {
+  from {
+    transform: translateY(5%);
+  }
+
+  40% {
+    transform: translateX(-5%);
+  }
+
+  65% {
+    transform: translateX(5%);
+  }
+
+  to {
+    transform: translateY(5%);
+  }
+}
+
+@keyframes movement2 {
+  from {
+    transform: translateY(-5%);
+  }
+
+  40% {
+    transform: translateX(7%);
+  }
+
+  65% {
+    transform: translateX(-7%);
+  }
+
+  to {
+    transform: translateY(-5%);
+  }
+}
+
+@keyframes movement3 {
+  from {
+    transform: translateY(20%);
+  }
+
+  40% {
+    transform: translateX(-5%);
+  }
+
+  65% {
+    transform: translateX(5%);
+  }
+
+  to {
+    transform: translateY(20%);
+  }
+}

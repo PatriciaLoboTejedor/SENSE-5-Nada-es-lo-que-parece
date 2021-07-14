@@ -1,0 +1,52 @@
+.body-dark {
+  filter: invert(1);
+  background-color: #141414;
+
+  .img-hero {
+    .memoji-hero {
+      filter: invert(1);
+    }
+
+    .elia {
+      background: url(../images/Elia-Dark.png) no-repeat center;
+      background-size: contain;
+    }
+
+    .rosa {
+      background: url(../images/Rosa-Dark.png) no-repeat center;
+      background-size: contain;
+    }
+
+    .pati {
+      background: url(../images/Pati-Dark.png) no-repeat center;
+      background-size: contain;
+    }
+
+    .maca {
+      background: url(../images/Maca-Dark.png) no-repeat center;
+      background-size: contain;
+    }
+
+    .maria {
+      background: url(../images/Maria-Dark.png) no-repeat center;
+      background-size: contain;
+    }
+  }
+
+  .container-person-info {
+    filter: invert(1);
+    .img-grey {
+      border-radius: 20px;
+      &:hover {
+        filter: grayscale(100);
+      }
+    }
+    .person-info {
+      filter: invert(1);
+    }
+  }
+
+  .footer__logoImg {
+    filter: invert(1);
+  }
+}
